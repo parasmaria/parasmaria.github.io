@@ -28,7 +28,6 @@ p {
   font-family: europa, helvetica, arial, sans-serif, serif;
   letter-spacing: 1px;
   color: black;
-  font-weight: 200;
 }
 
 .header p {
@@ -891,6 +890,7 @@ input:focus {
     padding: 0;
   }
   .outer {
+    width: 100%;
     margin: 2em auto;
     position: relative;
     text-align: center;
@@ -902,7 +902,8 @@ input:focus {
   }
   .search .fa-search {
     font-size: 22px;
-    margin: 0 6px 0 12px;
+    margin: 0;
+    padding: 0 0 0 15px;
     position: relative;
     top: 0;
     left: 0;
@@ -916,7 +917,7 @@ input:focus {
   }
   .search {
     font-size: 25px;
-    width: 300px;
+    width: auto;
     position: none;
     margin: 0 auto;
     text-align: unset;
@@ -928,6 +929,6 @@ input:focus {
     font-size: 25px;
   }
   .text h1, .text h2 {
-    font-size: 27px;
+    font-size: 20px;
   }
 }
