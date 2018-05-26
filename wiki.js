@@ -4,12 +4,6 @@ $(function() {
     $('.calc').fadeOut('fast');
   });
 
-  var typed = new Typed('.element', {
-    strings: ["the G&auml;vle goat.", "prisoner last meals.", "the Dupont murders.", "animals in space.", "the Famous Bushman.", "the future of Earth.", "Coffin birth."],
-    typeSpeed: 100,
-    loop: true
-  });
-
 
   // mobile menu
 

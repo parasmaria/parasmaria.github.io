@@ -1,19 +1,36 @@
+@font-face {
+  font-family: 'CircularStd-Bold';
+  src: url('fonts/CircularStd-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CircularStd-Book';
+  src: url('fonts/CircularStd-Book.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  margin: 5em auto;
+  margin: 210px;
+  margin-top: 2em;
+  margin-bottom: 2em;
   max-width: 1000px;
-  font-family: europa, helvetica, arial, sans-serif, serif;
+  font-family: 'CircularStd-Book';
   letter-spacing: 1px;
   background-color: white;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1em;
 }
+
 
 /* homepage */
 
@@ -25,23 +42,57 @@ p {
 .header h1 {
   margin: 0;
   font-size: 30px;
-  font-family: europa, helvetica, arial, sans-serif, serif;
+  font-family: Lekton, monospace;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: 400;
+  width: auto;
+}
+
+.email {
+  margin: 0;
+  font-size: 20px;
+  font-family: Lekton, monospace;
+  letter-spacing: 1px;
+  color: black;
+  font-weight: 400;
+  width: auto;
+  text-decoration: none;
+}
+
+.coffee {
+  border-bottom: none;
+  font-family: Lekton, monospace;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 25px;
+  font-family: CircularStd-Bold;
   letter-spacing: 1px;
   color: black;
 }
 
 .header p {
   margin: 0;
-  font-size: 30px;
+  font-size: 23px;
   line-height: 40px;
-  font-family: europa, helvetica, arial, sans-serif, serif;
+  font-family: 'CircularStd-Book';
   color: black;
 }
 
-.email {
+.email-section p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 30px;
+  font-family: 'CircularStd-Book';
   color: black;
-  text-decoration: none;
 }
+.highlight {
+  color: black;
+  border-bottom: 4px solid #dddee0;
+}
+
 
 /* nav */
 
@@ -83,6 +134,7 @@ p {
   color: black;
 }
 
+
 /* thumbnails */
 
 .proj-container {
@@ -95,11 +147,11 @@ p {
   flex-grow: 1;
   margin: 1em;
   background-image: url('Img/calc-transp.png');
-  background-color: #D7EAF0;
+  background-color: rgba(103, 138, 150, 0.17);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50%;
-  height: 400px;
+  height: 350px;
   border-radius: 4px;
   box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1);
   width: 40%;
@@ -109,11 +161,11 @@ p {
   flex-grow: 1;
   margin: 1em;
   background-image: url('Img/wiki-w.png');
-  background-color: #CAD6EE;
+  background-color: #dddee0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50%;
-  height: 400px;
+  height: 350px;
   border-radius: 4px;
   box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1);
   width: 40%;
@@ -122,28 +174,20 @@ p {
 .tumblr-thumbnail {
   flex-grow: 1;
   margin: 1em;
-  background-image: url('Img/tumblr.png');
-  background-color: #dddee0;
+  background-image: url('Img/tumblr-logo.png');
+  background-color: rgba(54, 70, 93, 0.77);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
-  height: 400px;
+  height: 350px;
   border-radius: 4px;
   box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1);
   width: 40%;
 }
 
-.misc-thumbnail {
+.email-section {
   flex-grow: 1;
   margin: 1em;
-  background-image: none;
-  background-color: #f8e1cf;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 400px;
-  border-radius: 4px;
-  box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.1);
-  width: 40%;
 }
 
 .wrapper {
@@ -171,11 +215,11 @@ p {
   height: auto;
 }
 
-
 .proj-title p {
   font-size: 20px;
   font-weight: normal;
 }
+
 
 /* hover on thumbnails */
 
@@ -209,6 +253,7 @@ p {
   -webkit-transition: opacity 0.5s ease-in-out;
 }
 
+
 /* calc */
 
 .calc-container {
@@ -223,9 +268,10 @@ p {
 .calc-info h1 {
   margin: 0;
   text-decoration: underline;
-  text-decoration-color: #D7EAF0;
+  text-decoration-color: rgba(103, 138, 150, 0.17);
   font-weight: 400;
-font-size: 3em;
+  font-size: 2em;
+  font-family: Lekton, monospace;
 }
 
 .calc-info h2 {
@@ -233,20 +279,21 @@ font-size: 3em;
 }
 
 .demo-container {
-  padding: 2em;
+  padding: 1em;
 }
 
 .background {
   width: 100%;
   height: auto;
   background-size: 10% 13%;
-  background-color: #D7EAF0;
+  background-color: rgba(103, 138, 150, 0.17);
   background-position: -24px -10px;
   position: relative;
   display: inline-block;
   border-radius: 6px;
   box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 }
+
 
 /* calc demo */
 
@@ -347,6 +394,7 @@ font-size: 3em;
   line-height: 3em;
 }
 
+
 /* wiki */
 
 .wiki-containter {
@@ -382,6 +430,7 @@ font-size: 3em;
   text-align: center;
   display: inline-block;
   font-size: 60px;
+  font-family: 'LinLibertine_R';
 }
 
 .text h1 {
@@ -453,7 +502,7 @@ font-size: 3em;
 
 input::placeholder {
   font-size: 30px;
-  font-family: europa, helvetica, arial, sans-serif, serif;
+  font-family: 'LinLibertine_R';
   color: #D8D8D8;
 }
 
@@ -471,11 +520,12 @@ input:focus {
 #results {
   display: block;
   color: black;
-  font-family: europa, helvetica, arial, sans-serif, serif;
+  font-family: 'LinLibertine_R';
   max-width: 600px;
   margin: 0 auto;
   padding-top: 30px;
 }
+
 
 /* wiki search results */
 
@@ -506,6 +556,7 @@ input:focus {
   margin: 0;
 }
 
+
 /* return to top icon */
 
 .footer {
@@ -524,6 +575,7 @@ input:focus {
   display: none;
 }
 
+
 /* return to top transition */
 
 .return-to-top i {
@@ -534,6 +586,7 @@ input:focus {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 
 /* page transitions */
 
@@ -556,48 +609,49 @@ input:focus {
 
 @keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
+
 
 /* fade-in on page load */
 
@@ -611,68 +665,84 @@ input:focus {
 
 @keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fade-in {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
+    opacity: 1;
   }
 }
+
+
 /* media queries */
+
+@media only screen and (max-width: 1200px) {
+  .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
+    height: 330px;
+  }
+}
 
 @media only screen and (max-width: 1100px) {
   body {
-  margin: 30px;
+    margin: 2em;
+  }
+  .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
+    height: 360px;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
-  height: 350px;
+    height: 350px;
   }
 }
 
 @media only screen and (max-width: 832px) {
   .proj-title {
-  font-size: 2em;
-  width: 75%;
-  height: auto;
+    font-size: 2em;
+    width: 75%;
+    height: auto;
   }
+
+  @media only screen and (max-width: 900px) {
+    .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
+      height: 310px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -698,10 +768,10 @@ input:focus {
   }
   .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
     width: auto;
-    height: 300px;
+    height: 480px;
   }
   .calc-thumbnail, .wiki-thumbnail {
-    background-size: 8rem;
+    background-size: 11rem;
   }
   .calf-info, .calc-demo {
     width: auto;
@@ -752,7 +822,6 @@ input:focus {
     font-size: 25px;
     line-height: 33px;
   }
-
   /* wiki */
   .full-size {
     height: auto;
@@ -771,6 +840,22 @@ input:focus {
     font-size: 33px;
     padding: 0;
   }
+  .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
+    width: auto;
+    height: 380px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
+    width: auto;
+    height: 320px;
+  }
+  .calc-thumbnail {
+    width: auto;
+    height: 320px;
+    background-size: 9rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -784,7 +869,17 @@ input:focus {
   .search {
     width: 260px;
   }
+  .calc-thumbnail, .wiki-thumbnail, .tumblr-thumbnail, .misc-thumbnail {
+    width: auto;
+    height: 250px;
+  }
+  .calc-thumbnail {
+    width: auto;
+    height: 320px;
+    background-size: 9rem;
+  }
 }
+
 
 /* on mobile */
 
@@ -820,9 +915,7 @@ input:focus {
     font-size: 1em;
     line-height: 1em;
   }
-
   /* calc media queries */
-
   .calc-container {
     padding: 0;
     display: inline-block;
@@ -851,7 +944,7 @@ input:focus {
   }
   .calc-info h1 {
     font-weight: bold;
-    font-family: europa, helvetica, arial, sans-serif, serif;
+    font-family: 'CircularStd';
     font-size: 1.5em;
     text-decoration: none;
     padding-bottom: 10px;
@@ -860,23 +953,21 @@ input:focus {
   .calc-info p, .calc-info h2, .demo-caption p {
     font-size: 1em;
     font-weight: normal;
-    font-family: europa, helvetica, arial, sans-serif, serif;
+    font-family: 'CircularStd';
     margin: 0;
     text-align: center;
   }
   .calc-info, .calc-demo {
     text-align: center;
   }
-
   /* wiki */
-
   #results {
     padding-top: 0;
     padding-left: 20px;
     padding-right: 20px;
   }
   #results a {
-    font-family: europa, helvetica, arial, sans-serif, serif;
+    font-family: 'CircularStd';
     text-decoration: none;
   }
   .top {
@@ -901,7 +992,7 @@ input:focus {
   #search {
     max-width: 250px;
     font-size: 20px;
-    font-family: europa, helvetica, arial, sans-serif, serif;
+    font-family: 'CircularStd';
   }
   .search .fa-search {
     font-size: 22px;
